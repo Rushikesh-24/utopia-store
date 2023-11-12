@@ -8,7 +8,7 @@ const Home = () => {
     <>
     <Header/>
     <div style={{
-        backgroundImage: 'url("/Assets/utopia.png")',
+        backgroundImage: 'url("/Assets/utopia.jpg")',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}
