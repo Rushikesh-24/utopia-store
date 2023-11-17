@@ -7,59 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const signup = () => {
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const router = useRouter();
-
-  const onSignup = async (e) => {
-    e.preventDefault();
-
-    if(!name || !email || !password){
-      // TODO: error mssg
-      console.log("All fields are required");
-      return;
-    }
-
-    try {
-      const resExists = await fetch('api/userExists', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json',},
-        body: JSON.stringify({
-          email,
-        }),
-      });
-
-      const {user} = await resExists.json();
-      if(user) {
-        console.log("User already exists");
-        return;
-      }
-
-      const res = await fetch('api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json',},
-        body: JSON.stringify({
-          name,
-          email,
-          password, 
-        }),
-      });
-
-      if (res.ok) {
-        const form = e.target;
-        form.reset();
-        router.push('/Shop');
-
-      }else {
-        console.log("user registration failed");
-      }
-    } catch (error) {
-      
-    }
-  }
   return (
     <>
     <Header/>
@@ -71,7 +18,7 @@ const signup = () => {
           <input onChange={(e) =>{setEmail(e.target.value)}} className='w-4/5 h-12 rounded-xl  border border-gray-400 outline-none text-gray-500 text-lg pl-20 m-3 ' type="email" placeholder='Email Address'/>
           <input onChange={(e) =>{setPassword(e.target.value)}} className='w-4/5 h-12 rounded-xl  border border-gray-400 outline-none text-gray-500 text-lg pl-20 m-3 ' type="password" placeholder='Password' />
         </div>
-        <button onClick={onSignup} className='w-4/5 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mt-6 mx-16'>Continue</button>
+        <button className='w-4/5 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mt-6 mx-16'>Continue</button>
         
             
         

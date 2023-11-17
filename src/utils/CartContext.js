@@ -40,11 +40,9 @@ const cartReducer = (state, action) => {
         const [state, dispatch] = useReducer(cartReducer, { cartItems: [] });
         
         const removeFromCart = (item) => {
-          console.log("removed")
           dispatch({ type: 'REMOVE_FROM_CART', payload: item });
         };  
         const addToCart = (item) => {
-            console.log("added")
             dispatch({ type: 'ADD_TO_CART', payload: item });
   };
 
@@ -56,7 +54,7 @@ const cartReducer = (state, action) => {
       {children}
     </CartContext.Provider>
   );
-};
+    };
 
 const useCart = () => {
   const context = useContext(CartContext);
