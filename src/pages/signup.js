@@ -73,12 +73,12 @@ const signup = () => {
         </div>
         <button onClick={onSignup} className='w-4/5 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mt-6 mx-16'>Continue</button>
         
-            <Link href="/login" className="mx-72 hover:underline hover:text-red-700">Visit Login Page</Link>
+            
         
       
-        <p id='login?' className='text-gray-400 w-4/5 mx-44 mt-10'>Already have a account ?
+        <p id='login?' className='text-gray-400 w-4/5 mx-56 mt-10'>Already have a account ?<span><Link href="/login" className="hover:underline hover:text-red-700">Visit Login Page</Link></span>
            </p>
-        <div id="agree" className='flex mx-36 w-4/5'>
+        <div id="agree" className='flex mx-44 w-4/5 mt-5'>
           <input type="checkbox" name="" id="" className='mx-2'/>
           <p>By continuing,I agree to terms & privacy policy</p>
         </div>
