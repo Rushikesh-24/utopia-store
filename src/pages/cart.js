@@ -1,9 +1,5 @@
 import { useCart } from '@/utils/CartContext';
 import React, { useEffect, useState } from 'react'
-import '@/app/globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import all_product from '../../public/Assets/all_product';
 
 
 const cart = () => {
@@ -32,7 +28,6 @@ const cart = () => {
     
   return (
     <> 
-    <Header/>
     <div id="cartitems" className='mx-24 mt-10'>
         <div id="cart-item-format-main" className='grid grid-cols-6 items-center gap-20 px-5  text-gray-600 font-semibold text-base'>
             <p>Products</p>
@@ -91,7 +86,6 @@ const cart = () => {
             </div>
         </div>
     </div>
-    <Footer/>
     </>
   )
 }

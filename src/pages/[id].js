@@ -1,9 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import { useCart } from '@/utils/CartContext';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import '@/app/globals.css'
 import all_product from '../../public/Assets/all_product';
 
 
@@ -65,7 +62,6 @@ function ProductPage({ product }) {
  
   return (
     <>
-    <Header/>
     <div id='path' className='flex gap-3 mt-3'>
     <p>Home</p><img src="/Assets/path.png" className='w-2' alt="logo" ></img><p>Product</p><img src="/Assets/path.png" alt="logo" className='w-2'></img>{product.category}<img src="/Assets/path.png" alt="logo" className='w-2'></img>{product.name}</div>
 
@@ -95,7 +91,6 @@ function ProductPage({ product }) {
       </div>
       
     </div>
-    <Footer/>
     
     </>
   );

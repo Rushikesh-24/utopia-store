@@ -1,15 +1,10 @@
 'use client';
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import '@/app/globals.css'
-import { useRouter } from "next/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const signup = () => {
   return (
     <>
-    <Header/>
     <div id="login" className=' flex w-screen h-screen pt-10 bg-gradient-to-b from-gray-400 to-white items-center justify-center'>
       <div id="container" className='w-3/5 h-4/5 bg-white shadow-2xl rounded-2xl'>
         <h1 className=' mx-5 text-5xl font-medium mt-6'>Signup</h1>
@@ -31,7 +26,6 @@ const signup = () => {
         </div>
       </div>
     </div>
-    <Footer/>
     </>
   )
 }

@@ -1,9 +1,6 @@
 'use client';
 import React from "react";
 import Link from "next/link";
-import '@/app/globals.css'
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import {useSession , signIn , signOut} from 'next-auth/react'
 
 const login = () => {
@@ -13,7 +10,6 @@ const login = () => {
   }
   if(session.status == "authenticated"){return(
     <>
-    <Header/>
     <div id="login" className=' flex w-screen h-screen pt-10 bg-gradient-to-b from-gray-400 to-white items-center justify-center'>
       <div id="container" className='w-3/5 h-4/5 bg-white shadow-2xl rounded-2xl'>
         <h1 className=' mx-5 text-5xl font-medium mt-6'>Signout</h1>
@@ -27,13 +23,11 @@ const login = () => {
     </button></div>
       </div>
     </div>
-    <Footer/>
     </>
   )}
   if(session.status == "unauthenticated")
   return (
     <>
-    <Header/>
     <div id="login" className=' flex w-screen h-screen pt-10 bg-gradient-to-b from-gray-400 to-white items-center justify-center'>
       <div id="container" className='w-3/5 h-4/5 bg-white shadow-2xl rounded-2xl'>
         <h1 className=' mx-5 text-5xl font-medium mt-6'>Login</h1>
@@ -57,7 +51,6 @@ const login = () => {
         </div>
       </div>
     </div>
-    <Footer/>
     </>
   )
 }
