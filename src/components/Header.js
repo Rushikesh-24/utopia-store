@@ -24,7 +24,7 @@ const Header = () => {
             }`}
             onClick={() => handleMenuClick("shop")}
           >
-            <Link href="/shop">
+            <Link href="/">
               Shop
               {menu === "shop" && <hr className="border-none w-11/12 h-1 rounded bg-red-600" />}
             </Link>

@@ -1,18 +1,20 @@
-import React from 'react'
 import '@/app/globals.css'
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import Newcollection from '@/components/Newcollection'
+import Offers from '@/components/Offers'
+import Popular from '@/components/Popular'
+import React from 'react'
 
 const Home = () => {
   return (
     <>
     <Header/>
-    <div style={{
-        backgroundImage: 'url("/Assets/utopia.jpg")',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
-      className="min-h-screen bg-[image-name] bg-cover bg-no-repeat"></div>
+      <Hero/>
+      <Popular/>  
+      <Offers/> 
+      <Newcollection/>
     <Footer/>
     </>
   )
