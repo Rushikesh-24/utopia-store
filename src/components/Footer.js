@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -7,11 +8,11 @@ const Footer = () => {
             <img src="/Assets/logo-black.png" alt="" className='w-40'/>
             <p className='text-2xl font-semibold '>UTOPIA STORE</p></div>
             <ul id="footerlinks" className='flex list-none gap-10 text-lg'>
-                <li className='cursor-pointer '>Company</li>
-                <li className='cursor-pointer '>Products</li>
-                <li className='cursor-pointer '>Offices</li>
-                <li className='cursor-pointer '>About</li>
-                <li className='cursor-pointer '>Contact</li>
+                <Link href="/error"><li className='cursor-pointer '>Company</li></Link>
+                <Link href="/error"><li className='cursor-pointer '>Products</li></Link>
+                <Link href="/error"><li className='cursor-pointer '>Offices</li></Link>
+                <Link href="/error"><li className='cursor-pointer '>About</li></Link>
+                <Link href="/error"><li className='cursor-pointer '>Contact</li></Link>
             </ul>
             <div id="socialicons" className=' flex gap-5 '>
                 <div id="container" className='p-3 pb-1 bg-white border border-white'>

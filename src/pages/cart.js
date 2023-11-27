@@ -75,13 +75,16 @@ const cart = () => {
                         <h3>₹{total}</h3>
                     </div>
                 </div>
-                <button className=" h-14 outline-none bg-red-400 text-white border rounded-full text-lg cursor-pointer w-80">PROCEED TO CHECKOUT</button>
+                <button className=" h-14 outline-none bg-red-400 text-white border rounded-full text-lg cursor-pointer w-80" onClick={()=>{alert("Warning: Proceeding to checkout may result in spontaneous daydreams of owning imaginary treasures.")}}>PROCEED TO CHECKOUT</button>
             </div>
             <div id="promo-code" className='flex-1 text-base font-medium mt-7 flex items-center justify-center flex-col'>
                 <p>If you have a promo code, Enter it here</p>
                 <div id="promobox" className='flex justify-center items-center'>
                     <input type="text" placeholder='promocode' className='border-2 w-full h-12 flex justify-center items-center shadow-xl mt-4 rounded-xl'/>
-                    <button className=" h-10 outline-none bg-red-400 text-white border rounded-full text-lg cursor-pointer w-32 mt-4 ml-3">Submit</button>
+                    <button className=" h-10 outline-none bg-red-400 text-white border rounded-full text-lg cursor-pointer w-32 mt-4 ml-3" onClick={()=>{
+                        alert("Whoa, you just unleashed the savings genie from the promo code bottle! Get ready for some magic math as we sprinkle discounts on your cart like confetti. Abracadabra, your wallet's happier!");
+                        setTotal(total-total*0.2)
+                    }}>Submit</button>
                 </div>
             </div>
         </div>
